@@ -1,0 +1,65 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/package/@parsable/parsable-cli
+name: parsable-cli
+description: Command Line Tools for the Parsable PaaS, built on the oclif framework.
+package: "@parsable/parsable-cli"
+version: 3.0.5
+runtime:
+  engine: node
+  minimum_node: ">=12.0.0"
+install:
+  - npm install -g @parsable/parsable-cli
+usage: parsable-cli COMMAND
+auth_flow:
+  - parsable-cli login    # authenticates the CLI session
+  - parsable-cli me       # shows the current authenticated user
+plugins:
+  - "@parsable/plugin-admin-cli"
+  - "@parsable/plugin-author-cli"
+  - "@wearableintelligence/parsable-cli-common"
+  - "@wearableintelligence/plugin-data-shipper-cli"
+command_groups:
+  - group: analytics:feed
+    summary: Manage analytics data feeds — clusters, credentials, JDBC sinks, topics, and schema registry.
+    example_commands:
+      - analytics:feed:cluster:internal:create
+      - analytics:feed:jdbc-sink:start
+      - analytics:feed:jdbc-sink:stop
+      - analytics:feed:topic:consume
+      - analytics:feed:credential:external:create
+  - group: analytics:report
+    summary: Manage analytics report configuration — groups, retention, quantified users, and uploads.
+    example_commands:
+      - analytics:report:group:add
+      - analytics:report:retention:set
+      - analytics:report:upload:external:enable
+      - analytics:report:quantified-users:enable
+  - group: attributes
+    summary: Manage attributes.
+    example_commands: [attributes:add, attributes:list, attributes:remove]
+  - group: exec-data
+    summary: Manage execution data.
+    example_commands: [exec-data:delete]
+  - group: jobs
+    summary: Create and delete jobs.
+    example_commands: [jobs:create, jobs:delete]
+  - group: params
+    summary: Manage parameters.
+    example_commands: [params:add, params:list, params:update]
+  - group: policies
+    summary: Manage policies.
+    example_commands: [policies:add, policies:list]
+  - group: settings
+    summary: Inspect and update tenant settings.
+    example_commands: [settings:audit, settings:list, settings:update, settings:versions]
+  - group: teams
+    summary: Create and delete teams.
+    example_commands: [teams:create, teams:delete]
+key_flows:
+  - name: Sign in
+    steps: [login, me]
+  - name: Ship analytics to an external warehouse
+    steps: [analytics:feed:jdbc-sink:external:create, analytics:feed:jdbc-sink:start]
+distribution:
+  update_channel_s3_bucket: parsable-cli

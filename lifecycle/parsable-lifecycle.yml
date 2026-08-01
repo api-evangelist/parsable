@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.parsable.com/
+versioning:
+  scheme: semver-header
+  header: Wi-Thrift-Version
+  documented_version: 1.24.102
+  docs: https://apidocs.parsable.com/
+  notes: >-
+    Clients target a specific major.minor.patch version of the API via the Wi-Thrift-Version request
+    header. Standard user tokens expire after 30 days; persistent tokens are long-lived.
+deprecation:
+  policy_url: null            # no public deprecation / Sunset (RFC 8594) policy found
+  sunset_header: false
+sla:
+  url: null                   # no public SLA found (enterprise contract only)
+status_page: https://parsable.statuspage.io
+status_components:
+  - WebEx
+  - API
+  - API US Region
+  - API EU Region
+  - Analytics
+  - Mobile
+  - Vendor
+deprecated_operations: []

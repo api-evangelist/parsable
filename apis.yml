@@ -1,8 +1,15 @@
 aid: parsable
 name: Parsable
-description: Parsable is a company surfaced as a portfolio company of a16z, gv, lightspeed-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Parsable is a Connected Worker platform for manufacturing and industrial operations. Its mobile-first
+  software replaces paper-based standard operating procedures with digital work instructions, guiding
+  frontline workers through audits, inspections, maintenance, safety, quality, and production workflows
+  while capturing real-time execution data. The platform surfaces analytics and insights that help
+  enterprises like Coca-Cola, Grupo Bimbo, and other global CPG and industrial manufacturers reduce
+  downtime, standardize processes, and drive continuous improvement. Parsable exposes a token-authenticated
+  JSON API (api.parsable.net) organized into 17 modules for jobs, templates, field data, messaging,
+  reporting, and analytics, plus an oclif-based command-line tool (parsable-cli) for administration and
+  data integration. Originally founded as Wearable Intelligence, Parsable is headquartered in Lincoln, RI.
 url: https://raw.githubusercontent.com/api-evangelist/parsable/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,17 +19,114 @@ x-backed-by:
 - lightspeed-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://parsable.com/wp-content/uploads/2021/03/parsable-logo.png
 tags:
 - Company
-apis: []
+- Connected Worker
+- Manufacturing
+- Industrial
+- Digital Work Instructions
+- Frontline Operations
+- Workflow
+- Analytics
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1
+apis:
+- name: Parsable Connected Worker API
+  description: >-
+    Token-authenticated JSON API for the Parsable Connected Worker platform. All calls are HTTP POSTs to
+    https://api.parsable.net/api/<MODULE> carrying a `{ "method", "arguments" }` envelope and an
+    Authorization: Token <jwt> header. Organized into 17 modules (Job, Job Template, Field Data, Messaging,
+    Reporting, Analytics, Team, User, Notification, and more) used to automate job planning, trigger
+    workflows, generate reports, and extract execution data.
+  humanURL: https://apidocs.parsable.com/
+  baseURL: https://api.parsable.net/api
+  properties:
+  - type: Documentation
+    url: https://apidocs.parsable.com/
+  - type: APIReference
+    url: https://apidocs.parsable.com/
+  - type: Authentication
+    url: authentication/parsable-authentication.yml
+  - type: Conventions
+    url: conventions/parsable-conventions.yml
+  - type: ErrorCatalog
+    url: errors/parsable-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/parsable-lifecycle.yml
+  - type: CLI
+    url: cli/parsable-cli.yml
 common:
+- type: TrustCenter
+  url: security/parsable-trust-center.yml
 - type: Website
-  url: http://parsable.com
+  url: https://parsable.com
+- type: DeveloperPortal
+  url: https://apidocs.parsable.com/
+- type: Documentation
+  url: https://apidocs.parsable.com/
+- type: APIReference
+  url: https://apidocs.parsable.com/
+- type: Product
+  url: https://parsable.com/product/
+- type: Login
+  url: https://go.parsable.com/login
+- type: SignUp
+  url: https://parsable.com/get-demo/
+- type: Support
+  url: https://parsable.com/contact-us/
+- type: Blog
+  url: https://parsable.com/parsable-blog/
+- type: BlogRSS
+  url: https://parsable.com/parsable-blog/feed/
+- type: GitHubOrganization
+  url: https://github.com/parsable
+- type: PrivacyPolicy
+  url: https://parsable.com/privacy-policy/
+- type: Compliance
+  url: https://parsable.com/compliance/
+- type: StatusPage
+  url: https://parsable.statuspage.io
+- type: Authentication
+  url: authentication/parsable-authentication.yml
+- type: Conventions
+  url: conventions/parsable-conventions.yml
+- type: ErrorCatalog
+  url: errors/parsable-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/parsable-lifecycle.yml
+- type: Conformance
+  url: conformance/parsable-conformance.yml
+- type: CLI
+  url: cli/parsable-cli.yml
+- type: Packages
+  url: packages/parsable-packages.yml
+- type: SDKs
+  url: packages/parsable-packages.yml
+- type: DomainSecurity
+  url: security/parsable-domain-security.yml
+- type: LLMsTxt
+  url: llms/parsable-llms.txt

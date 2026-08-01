@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: searched
+probe: true
+source: https://parsable.com/compliance/
+url: https://parsable.com/compliance/
+certifications:
+- SOC 2
+- GDPR
+evidence:
+- source: https://parsable.com/compliance/
+  keywords:
+  - soc 2
+  - soc2
+  - gdpr

@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/package/@parsable/parsable-cli
+packages:
+  - language: javascript
+    registry: npm
+    name: "@parsable/parsable-cli"
+    version: 3.0.5
+    url: https://www.npmjs.com/package/@parsable/parsable-cli
+    install: npm install -g @parsable/parsable-cli
+    description: Command Line Tools for the Parsable PaaS (oclif-based)
+    repository: https://github.com/parsable/parsable-cli
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@wearableintelligence/parsable-cli"
+    version: 2.0.0
+    url: https://www.npmjs.com/package/@wearableintelligence/parsable-cli
+    install: npm install -g @wearableintelligence/parsable-cli
+    description: >-
+      Command Line Tools for the Parsable PaaS under the legacy Wearable Intelligence npm scope
+      (Parsable's former company name). Superseded by @parsable/parsable-cli.
+    repository: https://github.com/parsable/parsable-cli
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@wearableintelligence/parsable-cli-common"
+    url: https://www.npmjs.com/package/@wearableintelligence/parsable-cli-common
+    install: npm install @wearableintelligence/parsable-cli-common
+    description: Shared library used by the parsable-cli command-line tools.
+    official: true
+notes:
+  - No first-party Python (PyPI), Java (Maven), .NET (NuGet), Go, Ruby, or Rust client library was found.
+  - The PyPI project named "parsable" is an unrelated argument-parsing library by Fritz Obermeyer, not Parsable Inc.

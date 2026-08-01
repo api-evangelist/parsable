@@ -1,0 +1,67 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.parsable.com/
+docs: https://apidocs.parsable.com/
+transport:
+  protocol: https
+  http_method: POST            # ALL API calls are POST, regardless of semantic action
+  style: json-rpc-like         # method + arguments envelope per module
+  base_url: https://api.parsable.net/api
+  path_pattern: /api/<MODULE>
+  tls_required: true
+request_envelope:
+  shape: '{ "method": "METHOD_NAME", "arguments": { ... } }'
+  required_headers:
+    - name: Authorization
+      value: "Token <jwt>"
+    - name: Accept
+      value: application/json
+    - name: Wi-Thrift-Version
+      value: "X.Y.Z"           # semantic version of the API being targeted
+response_envelope:
+  success_shape: '{ "method": "METHOD_NAME", "result": { ... } }'
+  error_shape: '{ "method": "METHOD_NAME", "exception": { "type": "...", "message": "...", "code": ... } }'
+authentication:
+  ref: authentication/parsable-authentication.yml
+  style: "bearer-like token header (Authorization: Token <jwt>)"
+versioning:
+  style: header
+  header: Wi-Thrift-Version
+  scheme: semver
+  documented_version: 1.24.102
+  ref: lifecycle/parsable-lifecycle.yml
+idempotency:
+  supported: false             # no idempotency-key header or contract documented
+pagination:
+  documented: false            # not documented in the public API overview
+error_envelope:
+  ref: errors/parsable-problem-types.yml
+  field: exception
+regions:
+  - name: US
+    note: default api.parsable.net region
+  - name: EU
+    note: separate EU API region (see status page components API US Region / API EU Region)
+modules:
+  # 17 documented modules of the Parsable API
+  thrift_based:
+    - Authentication
+    - Common
+    - Field Data
+    - Formula
+    - Group Headers
+    - Job Filter
+    - Job Role
+    - Job Template
+    - Job
+    - Messaging
+    - Metadata
+    - Notification
+    - Reference Sheets
+    - Reporting
+    - Team
+    - Template Set
+    - User
+  non_thrift:
+    - Analytics
+    - Document

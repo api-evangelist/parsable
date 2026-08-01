@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.parsable.com/
+docs: https://apidocs.parsable.com/
+summary:
+  types: [http]
+  http_schemes: [token]
+  token_format: JWT
+  header: Authorization
+  header_format: "Token <jwt>"
+schemes:
+  - name: StandardToken
+    type: http
+    scheme: token
+    token_format: JWT
+    description: >-
+      User token obtained through the Authentication module login flow. Expires after 30 days. Passed on
+      every request as `Authorization: Token <jwt>`.
+    location: header
+    parameter: Authorization
+    expiry: 30d
+  - name: PersistentToken
+    type: http
+    scheme: token
+    token_format: JWT
+    description: >-
+      Long-lived token for automated systems and server-to-server integrations. Does not expire on the
+      30-day standard schedule; allocated by Parsable on request. Passed as `Authorization: Token <jwt>`.
+    location: header
+    parameter: Authorization
+    expiry: long-lived
+notes:
+  - All API calls are HTTP POST and must be made over SSL/TLS.
+  - "Required headers include Authorization: Token <jwt>, Accept: application/json, and Wi-Thrift-Version: X.Y.Z."
+  - No OAuth2 / OpenID Connect discovery surface was found (/.well-known/openid-configuration returns 404).

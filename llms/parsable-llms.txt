@@ -1,0 +1,34 @@
+# Parsable
+
+> Parsable is a Connected Worker platform for manufacturing and industrial operations. Its mobile-first software replaces paper standard operating procedures with digital work instructions, guiding frontline workers through audits, inspections, maintenance, safety, quality, and production workflows while capturing real-time execution data and analytics. Parsable exposes a token-authenticated JSON API (api.parsable.net) organized into 17 modules, plus an oclif-based command-line tool (parsable-cli).
+
+## API
+
+- [API Reference](https://apidocs.parsable.com/): Parsable Connected Worker API overview and per-module reference. Base URL https://api.parsable.net/api. All calls are HTTP POST with a `{ "method", "arguments" }` envelope.
+- Authentication: `Authorization: Token <jwt>` header. Standard user tokens expire after 30 days; persistent tokens are long-lived (allocated on request).
+- Versioning: `Wi-Thrift-Version: X.Y.Z` header (semver; documented version 1.24.102).
+- Modules: Authentication, Common, Field Data, Formula, Group Headers, Job Filter, Job Role, Job Template, Job, Messaging, Metadata, Notification, Reference Sheets, Reporting, Team, Template Set, User, Analytics, Document.
+
+## Tooling
+
+- [parsable-cli on npm](https://www.npmjs.com/package/@parsable/parsable-cli): Command Line Tools for the Parsable PaaS. Install with `npm install -g @parsable/parsable-cli`. Command groups include jobs, teams, params, policies, settings, attributes, exec-data, and analytics (feed + report).
+
+## Docs
+
+- [Product](https://parsable.com/product/): Connected Worker platform overview.
+- [Blog](https://parsable.com/parsable-blog/): Connected Manufacturing blog.
+- [Compliance](https://parsable.com/compliance/): SOC 2 Type II and GDPR posture.
+- [Security Policy](https://parsable.com/security-policy/): security program and certifications.
+- [Privacy Policy](https://parsable.com/privacy-policy/)
+- [Status](https://parsable.statuspage.io): system status (US and EU API regions).
+- [Login](https://go.parsable.com/login)
+
+## Repo artifacts
+
+- [Authentication profile](authentication/parsable-authentication.yml)
+- [API conventions](conventions/parsable-conventions.yml)
+- [Error catalog](errors/parsable-problem-types.yml)
+- [Lifecycle](lifecycle/parsable-lifecycle.yml)
+- [Conformance](conformance/parsable-conformance.yml)
+- [CLI command surface](cli/parsable-cli.yml)
+- [Packages](packages/parsable-packages.yml)

@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://apidocs.parsable.com/
+format: custom-exception-envelope   # NOT RFC 9457; Parsable uses a proprietary exception object
+envelope:
+  field: exception
+  shape: '{ "method": "METHOD_NAME", "exception": { "type": "...", "message": "...", "code": ... } }'
+  notes: >-
+    On failure the response replaces the `result` object with an `exception` object carrying a machine
+    type, a human-readable message, and (for defined exceptions) an error code. Requests naming an
+    unknown method return an exception describing the unknown-method condition.
+problems:
+  - id: defined-exception
+    title: Defined exception
+    description: >-
+      A documented, module-specific exception. Returns an error code plus message within the exception
+      object. Specific codes are enumerated per-module in the Parsable API reference.
+    fields: [type, message, code]
+  - id: unknown-method
+    title: Unknown method
+    description: >-
+      The request named a method the target module does not implement. Returns an exception object with
+      a message and type describing the unknown-method condition.
+    fields: [type, message]
+notes:
+  - Parsable does not publish an RFC 9457 (application/problem+json) error surface.
+  - A full per-module error-code registry is documented behind the API reference at apidocs.parsable.com.
