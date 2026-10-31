@@ -64,6 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Parsable is a company surfaced as a portfolio company of a16z, gv, lightspeed-venture-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Parsable is a Connected Worker platform for manufacturing and industrial operations. Its mobile-first software replaces paper-based standard operating procedures with digital work instructions, guiding frontline workers through audits, inspections, maintenance, safety, quality, and production workflows while capturing real-time execution data. The platform surfaces analytics and insights that help enterprises like Coca-Cola, Grupo Bimbo, and other global CPG and industrial manufacturers reduce downtime, standardize processes, and drive continuous improvement. Parsable exposes a token-authenticated JSON API (api.parsable.net) organized into 17 modules for jobs, templates, field data, messaging, reporting, and analytics, plus an oclif-based command-line tool (parsable-cli) for administration and data integration. Originally founded as Wearable Intelligence, Parsable is headquartered in Lincoln, RI.
 
-Backed by: a16z, gv, lightspeed-venture-partners — http://parsable.com
+**Areas:** Company · Connected Worker · Manufacturing · Industrial · Digital Work Instructions · Frontline Operations · Workflows · Analytics
+
+## Parsable on APIs.io
+
+Everything profiled for Parsable is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/parsable/](https://apis.io/providers/parsable/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Parsable Connected Worker API](https://apis.io/apis/parsable/parsable-connected-worker-api/) — Token-authenticated JSON API for the Parsable Connected Worker platform. All calls are HTTP POSTs to https://api.parsable.net/api/<MODULE> carrying a `{…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Parsable Authentication](https://apis.io/security/parsable/parsable-authentication/)
+- [Parsable Domain Security](https://apis.io/security/parsable/parsable-domain-security/)
+- [Parsable Trust Center](https://apis.io/security/parsable/parsable-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://parsable.com)
+- [Documentation](https://apidocs.parsable.com/)
+- [API reference](https://apidocs.parsable.com/)
+- [Sign up](https://parsable.com/get-demo/)
+- [Support](https://parsable.com/contact-us/)
+- [Blog](https://parsable.com/parsable-blog/)
+- [Compliance](https://parsable.com/compliance/)
+- [Privacy policy](https://parsable.com/privacy-policy/)
+- [GitHub](https://github.com/parsable)
+- [Status](https://parsable.statuspage.io)
+
+## API Evangelist rating
+
+**Kin Score 33.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 59.5 |
+| Access clarity | 39.5 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/parsable/](https://apis.io/providers/parsable/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Parsable: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/parsable/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
